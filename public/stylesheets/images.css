@@ -1,10 +1,15 @@
 
 
-#my-image {
+.my-image {
     height:358px;
     width:358px;
 }
 
 .image {
     padding: 20px;
+}
+
+.icon {
+    height:128px;
+    width:128px;
 }
