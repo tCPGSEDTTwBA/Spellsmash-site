@@ -1,46 +1,82 @@
 extends layout
 
+mixin job-card-right(job,hours,company,description,dates)
+    .job-card.row.green
+        .col-8.blue
+            img(src="images/icons/work.svg" class="image icon cv-icon icon-right" alt="Work")
+        .col-4.job-info.text-left.red
+            p= job
+            p= hours
+            p= company
+            p= description
+            p= dates
+
+mixin job-card-left(job,hours,company,description,dates)
+    .job-card.row
+        .col-4.job-info.text-right
+            p= job
+            p= hours
+            p= company
+            p= description
+            p= dates
+        .col-8 
+            img(src="images/icons/work.svg" class="image icon cv-icon icon-left" alt="Work")
+        
+mixin card(title, hours, location, description, dates, isLeft, isWork)
+    //TODO
+
 block navbar 
   include includes/navbar.pug
 block content 
     div(class="container")
-        
         div(class="row row-cols-2 text-center jobs")
             div(class="col-12")
                 img(src="images/me2.jpg" class="image my-image" alt="Me")
+        div(class="row row-cols-2 text-center jobs")
             div(class="col-12 time-card")
                 h2 Today
-            div(class="col-12 d-flex justify-content-end job-card")
-                div
-                    p Frontline Service Engineer
-                    p Full-Time 
-                    p Payara
-                    p October 2020 - Present
-            div(class="col-12 d-flex justify-content-start job-card")
-                div
-                    p QA & CI Engineer 
-                    p Full-Time
-                    p Payara
-                    p March 2020 - October 2020
-            div(class="col-12 d-flex justify-content-end job-card")
-                div
-                    p Web Application Developer
-                    p Full-Time
-                    p Payara
-                    p June 2019 - March 2020
-            div(class="col-12 d-flex justify-content-start job-card")
-                div
-                    p Application Server Developer
-                    p Full-Time
-                    p Payara
-                    p November 2018 - June 2019
-            div(class="col-12 d-flex justify-content-end job-card")
-                div
-                    p Student
-                    p Full-Time
-                    p Hereford Sixth Form College
-                    p September 2016 - September 2018
-        div
+
+        +card('Application Server Developer', 'Full-Tme', 'Payara',
+        'Developer for the back-end of middle-ware application server, fixing bugs and implementing features.',
+        'November 2018 - June 2019', false, true)
+
+        +job-card-right('Frontline Service Engineer', 'Full-Time', 'Payara',
+        'Moved to the Service team as part of the frontline, dealing with critical customer tickets in time-sensitive and customer facing environment. Responsible for driving a company knowledge base migration and overhaul, coordinating communications across departments.',
+        'October 2020 - Present')
+
+        //+job-card-left('QA & CI Engineer', 'Full-Time', 'Payara', 
+        //'Responsible for infrastructure and testing facilities, responsible for deploying in-house IT asset management system. Testing and releasing the product monthly, on time.',
+        //'March 2020 - October 2020')
+
+        //+job-card-right('Web Application Developer', 'Full-Time', 'Payara',
+        //'Primary developer for customer facing customer portal for our product, invlolving full-stack developtment with Java, JSF, and Dev-OPS.',
+        //'June 2019 - March 2020')
+
+        //+card('Application Server Developer', 'Full-Tme', 'Payara',
+        //'Developer for the back-end of middle-ware application server, fixing bugs and implementing features.',
+        //'November 2018 - June 2019', true, false)
+
+        //div(class="job-card row")
+            div(class="col-7")
+                img(src="images/icons/education.svg" class="image icon cv-icon" alt="Education")
+            div(class="col-5 job-info")
+                p Student
+                p Full-Time
+                p Hereford Sixth Form College
+                p September 2016 - September 2018
+        //div(class="job-card row")
+            div(class="col-7")
+                img(src="images/icons/education.svg" class="image icon cv-icon" alt="Education")
+            div(class="col-5 job-info")
+                p Student
+                p Full-Time
+                p Whitecross High School
+                p September 2011 - September 2016
+            
+            
+            
+            //div(class="col-12 d-flex justify-content-start job-card")
+        //div
             h1 Qualificaitons
             div(class="col-12 qualification-card")
                 p 2018-present

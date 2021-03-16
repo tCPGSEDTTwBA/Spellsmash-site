@@ -1,3 +1,21 @@
-.job-card {
-    padding: 20px;
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.icon-right {
+    float: right;
+    margin-right: 130px;
+}
+
+.icon-left {
+    float: left;
+    margin-left: 130px;
 }
