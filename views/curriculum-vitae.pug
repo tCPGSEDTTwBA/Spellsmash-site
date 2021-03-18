@@ -1,32 +1,29 @@
 extends layout
 
-mixin job-card-right(job,hours,company,description,dates)
-    .job-card.row.green
-        .col-8.blue
-            img(src="images/icons/work.svg" class="image icon cv-icon icon-right" alt="Work")
-        .col-4.job-info.text-left.red
-            p= job
-            p= hours
-            p= company
-            p= description
-            p= dates
-
-mixin job-card-left(job,hours,company,description,dates)
-    .job-card.row
-        .col-4.job-info.text-right
-            p= job
-            p= hours
-            p= company
-            p= description
-            p= dates
-        .col-8 
-            img(src="images/icons/work.svg" class="image icon cv-icon icon-left" alt="Work")
-        
 mixin card(title, hours, location, description, dates, isLeft, isWork)
-    //TODO
+    .cv-card.row
+        if isLeft 
+            .col-4.cv-card-info.text-right
+                p= title
+                p= hours
+                p= company
+                p= description
+                p= dates
+            .col-8
+                img(src="images/icons/work.svg" class="image icon cv-icon icon-left" alt="Work")
+        else 
+            .col-8
+                img(src="images/icons/work.svg" class="image icon cv-icon icon-right" alt="Work")
+            .col-4.cv-card-info.text-left
+                p= title
+                p= hours
+                p= company
+                p= description
+                p= dates
 
 block navbar 
   include includes/navbar.pug
+  +navbar("CV", "Home", "CV", "Press")
 block content 
     div(class="container")
         div(class="row row-cols-2 text-center jobs")
@@ -34,60 +31,36 @@ block content
                 img(src="images/me2.jpg" class="image my-image" alt="Me")
         div(class="row row-cols-2 text-center jobs")
             div(class="col-12 time-card")
-                h2 Today
+                h2 History
+        
+        //Education
+        +card('Student', 'Part-Time', 'Aston University', 'Studying BSc Digital & Technology Solutions Degree as part of my degree apprenticeship',
+        'November 2018 - Now', true, true)
+
+        //Work
+        +card('Frontline Service Engineer', 'Full-Tme', 'Payara',
+        'Service team member as part of the frontline, dealing with critical customer tickets in time-sensitive and customer facing environment. Responsible for driving a company knowledge base migration and overhaul, coordinating communications across departments.',
+        'October 2020 - Now', false, true)
+
+        +card('QA & CI Engineer', 'Full-Tme', 'Payara',
+        'Responsible for infrastructure and testing facilities, responsible for deploying in-house IT asset management system. Testing and releasing the product monthly, on time.',
+        'March 2020 - October 2020', true, true)
+
+        +card('Web Application Developer', 'Full-Tme', 'Payara',
+        'Primary developer for customer facing customer portal for our product, invlolving full-stack developtment with Java, JSF, and Dev-OPS.',
+        'June 2019 - March 2020', false, true)
+
+        +card('Application Server Developer', 'Full-Tme', 'Payara',
+        'Responsible for infrastructure and testing facilities, responsible for deploying in-house IT asset management system. Testing and releasing the product monthly, on time.',
+        'March 2020 - October 2020', true, true)
 
         +card('Application Server Developer', 'Full-Tme', 'Payara',
         'Developer for the back-end of middle-ware application server, fixing bugs and implementing features.',
-        'November 2018 - June 2019', false, true)
+        'November 2018 - June 2019', false, false)
 
-        +job-card-right('Frontline Service Engineer', 'Full-Time', 'Payara',
-        'Moved to the Service team as part of the frontline, dealing with critical customer tickets in time-sensitive and customer facing environment. Responsible for driving a company knowledge base migration and overhaul, coordinating communications across departments.',
-        'October 2020 - Present')
+        //Education
+        +card('Student', 'Part-Time', 'Hereford Sixth Form', 'Studying A-Level Computer Science, Physics, and Psychology',
+        'September 2016 - July 2018', true, false)
 
-        //+job-card-left('QA & CI Engineer', 'Full-Time', 'Payara', 
-        //'Responsible for infrastructure and testing facilities, responsible for deploying in-house IT asset management system. Testing and releasing the product monthly, on time.',
-        //'March 2020 - October 2020')
-
-        //+job-card-right('Web Application Developer', 'Full-Time', 'Payara',
-        //'Primary developer for customer facing customer portal for our product, invlolving full-stack developtment with Java, JSF, and Dev-OPS.',
-        //'June 2019 - March 2020')
-
-        //+card('Application Server Developer', 'Full-Tme', 'Payara',
-        //'Developer for the back-end of middle-ware application server, fixing bugs and implementing features.',
-        //'November 2018 - June 2019', true, false)
-
-        //div(class="job-card row")
-            div(class="col-7")
-                img(src="images/icons/education.svg" class="image icon cv-icon" alt="Education")
-            div(class="col-5 job-info")
-                p Student
-                p Full-Time
-                p Hereford Sixth Form College
-                p September 2016 - September 2018
-        //div(class="job-card row")
-            div(class="col-7")
-                img(src="images/icons/education.svg" class="image icon cv-icon" alt="Education")
-            div(class="col-5 job-info")
-                p Student
-                p Full-Time
-                p Whitecross High School
-                p September 2011 - September 2016
-            
-            
-            
-            //div(class="col-12 d-flex justify-content-start job-card")
-        //div
-            h1 Qualificaitons
-            div(class="col-12 qualification-card")
-                p 2018-present
-                p BSc Digital & Technology Solutions
-            div(class="col-12 qualification-card")
-                p 2016-2018
-                p A-level Computer Science B
-                p A-level Psychology B
-                p A-level Physics D
-            div(class="col-12 qualification-card")
-                p 2011-2016
-                p GCSE 9 A-C
-            
-            
+        +card('Student', 'Part-Time', 'Whitecross High School', 'Studying GCSES',
+        'September 2011 - July 2016', false, false)

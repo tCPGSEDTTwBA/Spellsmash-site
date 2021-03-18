@@ -1,0 +1,51 @@
+body {
+    background-color: var(--background-colour);
+}
+
+.contact-me {
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+.contact-me .contact-element {
+    display: inline-block;
+    padding: 20px;
+}
+
+.table {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-element .icon {
+    padding: 20px;
+}
+
+.about-me {
+    margin-top: 150px;
+}
+
+.info-block {
+    margin-top: 25px;
+}
+
+.contact-me .svg {
+    fill: var(--colour4);
+}
+
+#gmail-svg:hover {
+    fill: var(--gmail-red);
+}
+
+#github-svg:hover {
+    fill: var(--github-grey);
+}
+
+#linkedin-svg:hover {
+    fill: var(--linkedin-blue);
+}
+
+#instagram-svg:hover {
+    fill: var(--instagram-pink);
+}

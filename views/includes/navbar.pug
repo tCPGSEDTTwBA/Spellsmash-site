@@ -1,19 +1,14 @@
-nav(class="navbar sticky-top")
-    div(class="container-fluid")
-        div(class="d-flex justify-content-start")
-            div(class="container")
-                div(class="col-12")
-                    span(class="navbar-brand h1" href="#") Alan Roth
-        div(class="navbar-container")    
+mixin navbar(activePage, ...pages)
+    nav(class="navbar sticky-top")
+        div(class="container")
+            div(class="col-12")
+                span(class="navbar-brand" href="#") 
+                    h1 Alan Roth
+        div(class="navbar-container")
             ul(class="navbar-navitems row")
-                li(class="nav-item col")
-                    a(class="nav-link" href="/") Home
-                li(class="nav-item col")
-                    a(class="nav-link" href="/curriculum-vitae") CV
-                li(class="nav-item col")
-                    a(class="nav-link" href="/press") Press
-                //li(class="nav-item col dropdown")
-                    a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Projects
-                    div(class="dropdown-menu" aria-labelledby="navbarDropdown")
-                        a(class="dropdown-item" href="#") Dev's Bookmark 
-                        a(class="dropdown-item" href="#") Java Zero To Hero Course
+                each page in pages
+                    li(class="nav-item col")
+                        if activePage === page
+                            a(class="nav-link active" href=page)= page
+                        else
+                            a(class="nav-link" href=page)= page

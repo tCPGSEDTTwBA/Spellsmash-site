@@ -1,0 +1,27 @@
+:root {
+    --background-colour: #596C68;
+    --colour-white: #F6F7F5;
+    --colour1: #E8A163;
+    --colour1-active: #f2b783;
+    --colour2: #BDBBB1;
+    --colour3: #82B2B3;
+    --colour4: #36364A;
+    --colour5: #E6DEBE;
+
+    --gmail-red: #EA4335;
+    --github-grey: #181717;
+    --linkedin-blue: #0a66c2;
+    --instagram-pink: #E4405F;
+}
+
+.red {
+    background-color: red;;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}

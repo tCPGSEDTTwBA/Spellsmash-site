@@ -1,10 +1,13 @@
 extends layout
 
+include includes/svg-mixins.pug
+include includes/navbar.pug
+
 block navbar 
-  include includes/navbar.pug
+  +navbar("Home", "Home", "CV", "Press")
 block content
   div(class="container")
-    div(class="row justify-content-evenly")
+    div(class="row justify-content-evenly about-me")
       div(class="col-6")
         img(src="images/me.jpg" class="image my-image" alt="Me")
       div(class="col-6")
@@ -15,17 +18,17 @@ block content
           p Passionate. Self-motivated. Creative. Open-minded.
           p Jakarta EE Comittee Member for JSTL and JSP specs.
     div(class="row justify-content-evenly")
-      div(class="col-6")
-        div(class="info-block")
-          div
+      div(class="col-12 table")
+        ul(class="contact-me")
+          li(class="contact-element")
             a(href="mailto:alanroth.business@gmail.com")
-              img(src="images/icons/gmail.svg" class="image icon")
+              +gmail-svg
+          li(class="contact-element")
             a(href="https://github.com/AlanRoth")
-              img(src="images/icons/github.svg" class="image icon")
-          div
+              +github-svg
+          li(class="contact-element")
             a(href="#")
-              img(src="images/icons/linkedin.svg" class="image icon")
+              +linkedin-svg
+          li(class="contact-element")
             a(href="https://www.instagram.com/slothroth")
-              img(src="images/icons/instagram.svg" class="image icon")
-      div(class="col-6")
-        img(src="images/me3.jpg" class="image my-image" alt="Me")
+              +instagram-svg
