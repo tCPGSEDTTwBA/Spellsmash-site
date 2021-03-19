@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--background-colour);
 }
@@ -34,6 +38,11 @@ body {
     fill: var(--colour4);
 }
 
+.contact-me .svg:hover {
+    fill: var(--colour4);
+    animation: up-bump 0.2s forwards ease;
+}
+
 #gmail-svg:hover {
     fill: var(--gmail-red);
 }
@@ -48,4 +57,9 @@ body {
 
 #instagram-svg:hover {
     fill: var(--instagram-pink);
+}
+
+@keyframes up-bump {
+    0% {transform: translateY(0%);}
+    100% {transform: translateY(-15%);}
 }

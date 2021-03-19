@@ -1,25 +1,13 @@
 extends layout
 
-mixin card(title, hours, location, description, dates, isLeft, isWork)
+mixin card(title, hours, location, description, dates, isWork)
     .cv-card.row
-        if isLeft 
-            .col-4.cv-card-info.text-right
-                p= title
-                p= hours
-                p= company
-                p= description
-                p= dates
-            .col-8
-                img(src="images/icons/work.svg" class="image icon cv-icon icon-left" alt="Work")
-        else 
-            .col-8
-                img(src="images/icons/work.svg" class="image icon cv-icon icon-right" alt="Work")
-            .col-4.cv-card-info.text-left
-                p= title
-                p= hours
-                p= company
-                p= description
-                p= dates
+        .col-12.cv-card-info.text-left
+            h3= title
+            p= location
+            p= description
+            p= hours
+            p= dates
 
 block navbar 
   include includes/navbar.pug
@@ -35,32 +23,32 @@ block content
         
         //Education
         +card('Student', 'Part-Time', 'Aston University', 'Studying BSc Digital & Technology Solutions Degree as part of my degree apprenticeship',
-        'November 2018 - Now', true, true)
+        'November 2018 - Now', true)
 
         //Work
         +card('Frontline Service Engineer', 'Full-Tme', 'Payara',
         'Service team member as part of the frontline, dealing with critical customer tickets in time-sensitive and customer facing environment. Responsible for driving a company knowledge base migration and overhaul, coordinating communications across departments.',
-        'October 2020 - Now', false, true)
+        'October 2020 - Now', true)
 
         +card('QA & CI Engineer', 'Full-Tme', 'Payara',
         'Responsible for infrastructure and testing facilities, responsible for deploying in-house IT asset management system. Testing and releasing the product monthly, on time.',
-        'March 2020 - October 2020', true, true)
+        'March 2020 - October 2020', true)
 
         +card('Web Application Developer', 'Full-Tme', 'Payara',
         'Primary developer for customer facing customer portal for our product, invlolving full-stack developtment with Java, JSF, and Dev-OPS.',
-        'June 2019 - March 2020', false, true)
+        'June 2019 - March 2020', true)
 
         +card('Application Server Developer', 'Full-Tme', 'Payara',
         'Responsible for infrastructure and testing facilities, responsible for deploying in-house IT asset management system. Testing and releasing the product monthly, on time.',
-        'March 2020 - October 2020', true, true)
+        'March 2020 - October 2020', true)
 
         +card('Application Server Developer', 'Full-Tme', 'Payara',
         'Developer for the back-end of middle-ware application server, fixing bugs and implementing features.',
-        'November 2018 - June 2019', false, false)
+        'November 2018 - June 2019', false)
 
         //Education
-        +card('Student', 'Part-Time', 'Hereford Sixth Form', 'Studying A-Level Computer Science, Physics, and Psychology',
-        'September 2016 - July 2018', true, false)
+        +card('Student', 'Full-Time', 'Hereford Sixth Form', 'Studying A-Level Computer Science, Physics, and Psychology',
+        'September 2016 - July 2018', false)
 
-        +card('Student', 'Part-Time', 'Whitecross High School', 'Studying GCSES',
-        'September 2011 - July 2016', false, false)
+        +card('Student', 'Full-Time', 'Whitecross High School', 'Studying GCSES',
+        'September 2011 - July 2016', false)
