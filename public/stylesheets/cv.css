@@ -8,3 +8,26 @@
     margin-left: 130px;
 }
 
+#my-cv-image {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.grow {
+    transition: height 0.5s;
+    overflow: hidden;
+    height: 65px;
+}
+
+.cv-card {
+    padding: 20px;
+}
+
+.grow:hover {
+    height: 145px;
+}
+
+.grow:active {
+    height: 145px;
+} 
+
