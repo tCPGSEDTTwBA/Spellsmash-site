@@ -13,21 +13,25 @@
     margin-bottom: 50px;
 }
 
-.grow {
-    transition: height 0.5s;
-    overflow: hidden;
-    height: 65px;
-}
-
-.cv-card {
+.cv-card-info {
+    max-width: 50ch;
     padding: 20px;
 }
 
-.grow:hover {
-    height: 145px;
+.cv-card-info div img {
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
 }
 
-.grow:active {
-    height: 145px;
-} 
+.cv-title-container h3 {
+    font-weight: bold;
+}
 
+.cv-card-info .cv-bulletpoints {
+    text-align: left;
+}
+
+.cv-hours-location {
+    font-weight: bold;
+}

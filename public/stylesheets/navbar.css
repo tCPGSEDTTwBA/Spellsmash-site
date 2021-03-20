@@ -28,3 +28,27 @@
     text-decoration: none;
     color: var(--colour-white);
 }
+
+@media only screen and (max-width: 1567px) {
+    nav {
+        text-align: center;
+    }
+
+    .navbar-brand {
+        display: none;
+    }
+
+    .navbar-container {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1568px) {
+    nav {
+        text-align: left;
+    }
+
+    .navbar-container {
+        text-align: right;
+    }
+}

@@ -63,3 +63,16 @@ body {
     0% {transform: translateY(0%);}
     100% {transform: translateY(-15%);}
 }
+
+@media only screen and (max-width: 991px) {
+    .about-me .col {
+        padding-left: 70px;
+        padding-right: 70px;
+        text-align: center;
+    }
+
+    .contact-element .icon {
+        height: 80px;
+        width: 80px;
+    }
+}

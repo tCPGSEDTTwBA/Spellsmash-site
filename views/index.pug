@@ -3,20 +3,23 @@ extends layout
 include includes/svg-mixins.pug
 include includes/navbar.pug
 
+mixin about-me()
+  h1 Hey! I'm Alan.
+  p A 20-something professional problem-solver, currently employed as a Software Engineer. Born in Poland, based in the UK. 
+  p Currently employed at Payara as a Degree Software Engineering Apprentice with Aston University.
+  p Passionate. Self-motivated. Creative. Open-minded.
+  p Jakarta EE Comittee Member for JSTL and JSP specs.
+
 block navbar 
   +navbar("Home", "Home", "CV", "Press")
 block content
   div(class="container")
     div(class="row justify-content-evenly about-me")
-      div(class="col-6")
+      div(class="col")
         img(src="images/me.jpg" class="image my-image" alt="Me")
-      div(class="col-6")
+      div(class="col")
         div(class="info-block")
-          h1 Hey! I'm Alan.
-          p A 20-something professional problem-solver, currently employed as a Software Engineer. Born in Poland, based in the UK. 
-          p Currently employed at Payara as a Degree Software Engineering Apprentice with Aston University.
-          p Passionate. Self-motivated. Creative. Open-minded.
-          p Jakarta EE Comittee Member for JSTL and JSP specs.
+          +about-me
     div(class="row justify-content-evenly")
       div(class="col-12 table")
         ul(class="contact-me")

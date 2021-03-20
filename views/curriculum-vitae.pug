@@ -1,24 +1,28 @@
 extends layout
 
 mixin card(title, hours, location, dates, isWork, ...bulletpoints)
-    .cv-card.row.grow
-        .col-12.cv-card-info.text-center
-            h3= title
-            p= location
-            ul 
+    .cv-card.d-flex.justify-content-center
+        .col.cv-card-info.text-center
+            div.cv-title-container.d-flex.justify-content-center
+                if isWork
+                    img.cv-card-image(src="images/icons/work.svg")
+                else
+                    img.cv-card-image(src="images/icons/education.svg")
+                h3.cv-title= title
+            p.cv-hours-location= hours + " @ " + location
+            p.cv-dates= dates
+            ul.cv-bulletpoints 
                 each bulletpoint in bulletpoints
-                    li 
-                        p= bulletpoint
-            p= hours
-            p= dates
+                    li.cv-bulletpoint 
+                        p.cv-bulletpoint-content= bulletpoint
 
 block navbar 
   include includes/navbar.pug
   +navbar("CV", "Home", "CV", "Press")
 block content 
     div(class="container")
-        div(class="row row-cols-2 text-center jobs")
-            div(class="col-12")
+        div(class="row")
+            div(class="col text-center")
                 img(src="images/me2.jpg" class="image my-image" id="my-cv-image" alt="Me")
         
         +card('Frontline Service Engineer', 'Full-Time', 'Payara', 'Oct 2020 - Now', true, '100% SLA targets met, 100% Customer Satisfaction.', 'Dealing with complex customer issues that occur in production environments.', 'Responsible for bringing average response time to tickets from 24-hours to 1-hour.', 
@@ -35,7 +39,4 @@ block content
 
         +card('Student', 'Full-Time', 'Hereford Sixth Form', 'September 2016 - July 2018', false, 'A-Level Computer Science', 'A-Level Physics', 'A-Level Psychology')
 
-        +card('Student', 'Full-Time', 'Whitecross High School', 'September 2011 - July 2016', false, '9 GCSES')
-
-        //+card('Student', 'Full-Time', 'Whitecross High School', 'Studying GCSES',
-        //'September 2011 - July 2016', false)
+        +card('Student', 'Full-Time', 'Whitecross High School', 'September 2011 - July 2016', false, 'Studied 9 GCSES')
