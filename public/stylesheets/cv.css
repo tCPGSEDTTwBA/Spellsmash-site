@@ -15,7 +15,11 @@
 
 .cv-card-info {
     max-width: 50ch;
-    padding: 20px;
+    padding: 50px;
+    background-color: var(--colour-accent);
+    box-shadow: 0px 3px 15px rgba(0,0,0,1);
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .cv-card-info div img {

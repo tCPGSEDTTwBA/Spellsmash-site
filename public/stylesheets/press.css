@@ -1,0 +1,39 @@
+.press-segment {
+    padding: 50px;
+    background-color: var(--colour-accent);
+    box-shadow: 0px 3px 15px rgba(0,0,0,1);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 100ch;
+}
+
+.press-title::before {
+    content: url("../images/icons/newspaper.svg");
+    display: block;
+    height: 120px;
+    width: 120px;
+}
+
+.press-content {
+    position: relative;
+    max-height: 110px;
+    overflow:hidden;
+}
+
+.press-link {
+    vertical-align: bottom;
+}
+
+.press-segment .continue {
+    position: absolute;
+    padding: 120px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to bottom, transparent, #B5A77E);
+}
+
+.press-segment h1, .press-segment h2, .press-segment h3, .press-segment p {
+    color: white;
+}

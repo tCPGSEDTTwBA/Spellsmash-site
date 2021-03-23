@@ -1,12 +1,15 @@
 :root {
     --background-colour: #596C68;
+    --background-colour-dark: rgb(77, 97, 93);
     --colour-white: #F6F7F5;
+    --colour-accent: #B5A77E;
     --colour1: #E8A163;
     --colour1-active: #f2b783;
     --colour2: #BDBBB1;
     --colour3: #82B2B3;
     --colour4: #36364A;
     --colour5: #E6DEBE;
+    --colour6: #B6CDAD;
 
     --gmail-red: #EA4335;
     --github-grey: #181717;
