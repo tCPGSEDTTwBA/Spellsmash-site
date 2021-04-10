@@ -2,7 +2,7 @@ extends layout
 
 mixin card(title, hours, location, dates, isWork, ...bulletpoints)
     .cv-card.d-flex.justify-content-center
-        .col.cv-card-info.text-center
+        .col.cv-card-info.text-center.box-shadow
             div.cv-title-container.d-flex.justify-content-center
                 if isWork
                     img.cv-card-image(src="images/icons/work.svg")
@@ -21,12 +21,13 @@ block navbar
   +navbar("CV", "Home", "CV", "Press")
 block content 
     div(class="container")
-        div(class="row")
-            div(class="col text-center")
-                img(src="images/me2.jpg" class="image my-image" id="my-cv-image" alt="Me")
-        
+        div(class="row intro-bar")
+            div(class="col text-center my-image-container")
+                img(src="images/me2.jpg" class="image my-image box-shadow" id="my-cv-image" alt="Me")
+            div(class="col blurb box-shadow")
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec risus tempus sapien imperdiet scelerisque. Suspendisse enim magna, porta a blandit a, scelerisque at risus. Donec eleifend odio rhoncus, auctor lectus ut, mollis nulla. In hac habitasse platea dictumst. Mauris sollicitudin nulla velit, sit amet interdum libero luctus maximus. Fusce pellentesque orci vitae eros ullamcorper, at ultrices leo malesuada. Mauris nec mattis urna. Sed vel enim quam. Sed in elementum justo, vel venenatis velit. 
         +card('Frontline Service Engineer', 'Full-Time', 'Payara', 'Oct 2020 - Now', true, '100% SLA targets met, 100% Customer Satisfaction.', 'Dealing with complex customer issues that occur in production environments.', 'Responsible for bringing average response time to tickets from 24-hours to 1-hour.', 
-        'Spearheading a company technical knowledge base migration and overhaul, organising and working with multiple departments.', 'Simpyfing and automating the documentation release process to a single click.')
+        'Spearheading a company technical knowledge base migration and overhaul, organising and working with multiple departments.', 'Simpyfing and automating the documentation release process to a single click.', 'Working with customers globally')
 
         +card('QA & CI Engineer', 'Full-Time', 'Payara', 'March 2020 - October 2020', true, 'Set up IT asset managment system', 'bringing automated pull request testing to Enterprise distributions', 
         'Writing Integration and Unit tests for the product', 'Orchastrating monthly releases of the product', 'Scripting to improve docker image release process')

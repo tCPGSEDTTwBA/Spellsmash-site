@@ -5,6 +5,7 @@ mixin press-segment(title, subtitle, content, link)
     h1.press-title=title 
     h3.press-subtitle=subtitle 
     p.press-content=content
+      div.fade-gradient
     div(class="continue")
       a(href=link class="press-link") Continue Reading
 
@@ -21,5 +22,5 @@ block content
       
       +press-segment("Tech firm Payara signs up for degree apprenticeship scheme with Aston University",
       "A MALVERN tech firm is celebrating joining forces to provide apprenticeships.",
-      "Payara, which is based at the Malvern Hills Science Park, has been chosen by Malvern Hills District Council to receive £1,000 per apprentice to fund their training and development with the company.",
+      "Tech firm Payara Services Ltd has signed up for a partnership with the West Midlands Combined Authority (WMCA), who have presented the Malvern based company with funding for its 2020 apprenticeship programme. With the support of the WMCA, Payara is able to continue its long-standing partnership with Aston University and offer two more individuals a degree apprenticeship in BSc digital and technology solutions. The educational establishment has worked closely with Payara for many years, ensuring that all apprentices successfully integrate their theoretical knowledge with their on-the-job training.",
       "https://www.worcesternews.co.uk/news/18115068.tech-firm-payara-signs-degree-apprenticeship-scheme-aston-university/")

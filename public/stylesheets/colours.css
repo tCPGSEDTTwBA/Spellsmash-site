@@ -17,6 +17,10 @@
     --instagram-pink: #E4405F;
 }
 
+.box-shadow {
+    box-shadow: 0px 3px 15px rgba(0,0,0,1);
+}
+
 .red {
     background-color: red;;
 }

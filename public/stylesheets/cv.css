@@ -13,13 +13,28 @@
     margin-bottom: 50px;
 }
 
+.my-image-container {
+    padding: 50px;
+}
+
 .cv-card-info {
     max-width: 50ch;
     padding: 50px;
     background-color: var(--colour-accent);
-    box-shadow: 0px 3px 15px rgba(0,0,0,1);
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.intro-bar {
+    padding: 20px;
+}
+
+.blurb {
+    margin-top: 115px;
+    height: 300px;
+    width: 50ch;
+    padding: 30px;
+    background-color: var(--colour-accent);
 }
 
 .cv-card-info div img {
