@@ -7,7 +7,8 @@ mixin press-segment(title, subtitle, content, link)
     p.press-content=content
       div.fade-gradient
     div(class="continue")
-      a(href=link class="press-link") Continue Reading
+      button(href=link role="button" class="button")
+        a(href=link) Continue Reading
 
 block navbar 
   include includes/navbar.pug
