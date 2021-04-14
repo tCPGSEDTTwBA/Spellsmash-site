@@ -2,10 +2,9 @@ extends layout
 
 include includes/svg-mixins.pug
 include includes/navbar.pug
-
 mixin about-me()
   h1 Hey! I'm Alan.
-  p A 20-something professional problem-solver, excited by code. Born in Poland, based in the UK. 
+  p= "A " + from(2000) + " year old professional problem-solver, excited by code. Born in Poland, based in the UK."
   p Currently employed at Payara as a Degree Software Engineering Apprentice with Aston University.
   p Passionate. Self-motivated. Creative. Open-minded.
   p Jakarta EE Comittee Member for JSTL and JSP specs.

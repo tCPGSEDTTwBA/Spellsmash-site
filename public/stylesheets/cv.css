@@ -30,10 +30,9 @@
 }
 
 .blurb {
-    margin-top: 115px;
-    height: 300px;
-    width: 50ch;
-    padding: 30px;
+    margin-top: 40px;
+    padding: 35px;
+    max-width: 100ch;
     background-color: var(--colour-accent);
 }
 
