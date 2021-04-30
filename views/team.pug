@@ -1,0 +1,43 @@
+extends layout
+
+mixin card(title, name, isDev, dates, pictureSrc, ...bulletpoints)
+    .team-card.d-flex.justify-content-center
+        .col.team-card-info.text-center.box-shadow
+            img(src= pictureSrc class="team-card-image")
+            div.team-title-container.d-flex.justify-content-center
+                h3.team-name= name
+            h4.team-title= title
+                if isDev
+                    img.team-card-icon(src="images/icons/dev.svg")
+                else
+                    img.team-card-icon(src="images/icons/BA.svg")
+            p.team-dates= dates
+            ul.team-bulletpoints 
+                each bulletpoint in bulletpoints
+                    li.team-bulletpoint 
+                        p.team-bulletpoint-content= bulletpoint
+        
+
+
+
+block navbar 
+  include includes/navbar.pug
+  +navbar("Team", "Home", "Team")
+block content
+    div(class="container")
+        div(class="row intro-bar")
+            div(class="col-6 text-center my-image-container")
+                img(src="images/team.png" class="image team-image box-shadow" id="my-team-image" alt="Team")
+            div(class="col-6 blurb box-shadow")
+                img.team-icon-sm(src="images/icons/team.svg")
+                h3 Who are we?
+                p tCPGSEDTT/wBA is a passionate group of Software Engineers and Business Analysts, who strive towards one common goal: 
+                h4(class="our-aim") Producing the most entertaining games for people of all ages.
+                p Although we may be small we have such a diverse range of skillsets to ensure our games are fun, educational and well optimised.
+                p You can find the members of the team below!
+        +card('Software Engineer', 'Matt Binnie', true, 'Feb 2021 - Present', 'images/matt.png', 'Works for Gocompare', 'Loves C#', 'Cycles a lot')
+        +card('Software Engineer', 'Alan Roth', true, 'Feb 2021 - Present', 'images/alan.jpg', 'Works for Payara', 'Loves front end development', 'Can squat 90kg')
+        +card('Software Engineer', 'Talha Muhammad', true, 'Feb 2021 - Present', 'images/talha.png', 'Works for Capgemini', 'Loves Testing', 'Has 3 dogs')
+        +card('Software Engineer', 'Max Williams', true, 'Feb 2021 - Present', 'images/max.png', 'Works for Capgemini', 'Loves good coding standards', 'Can see in binary')
+        +card('Business Analyst', 'Gaby Vukasinovic', false, 'Feb 2021 - Present', 'images/gabi.png', 'Works for Capgemini', 'Loves risk assessments', 'Can speak backwards')
+        +card('Business Analyst', 'Josh Fox', false, 'Feb 2021 - Present', 'images/josh.png', 'Works for Anglian Water', 'Loves project managing', 'Can swim faster than a dolphin')

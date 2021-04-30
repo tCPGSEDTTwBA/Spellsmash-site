@@ -1,6 +1,7 @@
 :root {
     --background-colour: #596C68;
     --background-colour-dark: rgb(77, 97, 93);
+    --background-colour-spellsmash: #4d5c9e;
     --colour-white: #F6F7F5;
     --colour-accent: #B5A77E;
     --colour1: #E8A163;
@@ -10,6 +11,9 @@
     --colour4: #36364A;
     --colour5: #E6DEBE;
     --colour6: #B6CDAD;
+    --colour7: #5750ff;
+    --colour7-active: #5f9bff;
+    --card-background: #957bff;
 
     --gmail-red: #EA4335;
     --github-grey: #181717;

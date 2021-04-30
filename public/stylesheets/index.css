@@ -1,5 +1,5 @@
 body {
-    background-color: var(--background-colour);
+    background-color: var(--background-colour-spellsmash);
 }
 
 .contact-me {
@@ -12,6 +12,31 @@ body {
     padding: 20px;
 }
 
+.intro {
+    font-family: monospace;
+    padding-top:50px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-subtext {
+    display: flex;
+    justify-content: center;
+}
+
+.video-content {
+    padding-top: 50px;
+}
+
+.magic-icon {
+    padding-left: 20px;
+}
+
+.trailer {
+    width: 600px;
+    height: 400px;
+}
+
 .table {
     display: table;
     margin: 0 auto;
@@ -22,12 +47,13 @@ body {
     padding: 20px;
 }
 
-.about-me {
+.about-the-game {
     margin-top: 150px;
+    width: 100ch;
 }
 
 .info-block {
-    margin-top: 25px;
+    margin-top: 110px;
 }
 
 .contact-me .svg {
@@ -61,7 +87,7 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
-    .about-me .col {
+    .about-the-game .col {
         padding-left: 70px;
         padding-right: 70px;
         text-align: center;

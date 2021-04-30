@@ -1,10 +1,14 @@
 .navbar {
-    background-color: var(--colour1);
+    background-color: var(--colour7);
 }
 
 .navbar-navitems {
     list-style-type: none;
     margin-right: 20px
+}
+
+.wizard-icon{
+    padding-left: 20px;
 }
 
 .nav-item {
@@ -14,12 +18,12 @@
 }
 
 .nav-item a:hover{
-    background-color: var(--colour1-active);
+    background-color: var(--colour7-active);
     border-radius: 5px;
 }
 
 .nav-item .active {
-    background-color: var(--colour1-active);
+    background-color: var(--colour7-active);
     border-radius: 5px;
 }
 

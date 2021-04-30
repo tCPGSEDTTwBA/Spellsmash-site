@@ -1,7 +1,6 @@
-.my-image {
-    height:358px;
-    width:358px;
-    border-radius: 50%;
+.team-image {
+    height: 400px;
+    width: 479px;
 }
 
 .icon {
@@ -9,13 +8,9 @@
     width:128px;
 }
 
-.cv-icon {
-    height:96px;
-    width:96px;
+.team-icon-sm {
+    height:128px;
+    width:128px;
 }
 
-.cv-icon-sm {
-    height:64px;
-    width:64px;
-    margin: 15px;
-}
+

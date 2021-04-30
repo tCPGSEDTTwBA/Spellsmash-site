@@ -2,35 +2,40 @@ extends layout
 
 include includes/svg-mixins.pug
 include includes/navbar.pug
-mixin about-me()
-  h1 Hey! I'm Alan.
-  p= "A " + from(2000) + " year old professional problem-solver, excited by code. Born in Poland, based in the UK."
-  p Currently employed at Payara as a Degree Software Engineering Apprentice with Aston University.
-  p Passionate. Self-motivated. Creative. Open-minded.
-  p Jakarta EE Comittee Member for JSTL and JSP specs.
+mixin about-the-game()
+  h1 Tetris and Scrabble merged into one!
+  p Spellsmash is a new fun innovative way to build your critical thinking and language skills!
+  p It combines the critically acclaimed games of Scrabble and Tetris in a hybrid style, fast paced puzzle game.
+  p Your aim is to form words using the falling letters, the longer and more complex the word the more points you rack up to spend on power-ups to help you out of sticky situations!
+  p Check out our contact details below to keep up to date with our development process on Spellsmash!
 
 block navbar 
-  +navbar("Home", "Home", "CV", "Press")
+  +navbar("Home", "Home", "Team")
 block content
   div(class="container")
-    div(class="row justify-content-evenly about-me")
-      div(class="col")
-        img(src="images/me.jpg" class="image my-image box-shadow" alt="Me")
+    div(class="row justify-content-evenly about-the")
+      div(class="col-12")
+        h1(class="intro") Introducing Spellsmash!  
+          i(class="fas fa-magic magic-icon")
+      div(class="col video-content")
+        h3(class="intro-subtext") Check out our promo below:
+        video(autoplay class='trailer' controls)
+          source(src="videos/trailer.mp4", type='video/mp4')
       div(class="col")
         div(class="info-block")
-          +about-me
+          +about-the-game
     div(class="row justify-content-evenly")
       div(class="col-12 table")
         ul(class="contact-me")
           li(class="contact-element")
-            a(href="mailto:alanroth.business@gmail.com")
+            a(href="mailto:team4@spellsmash.com")
               +gmail-svg
           li(class="contact-element")
-            a(href="https://github.com/AlanRoth")
+            a(href="https://github.com/tCPGSEDTTwBA/SpellSmash")
               +github-svg
           li(class="contact-element")
-            a(href="#")
+            a(href="https://uk.linkedin.com/")
               +linkedin-svg
           li(class="contact-element")
-            a(href="https://www.instagram.com/slothroth")
+            a(href="https://www.instagram.com/")
               +instagram-svg

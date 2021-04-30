@@ -1,0 +1,71 @@
+.icon-right {
+    float: right;
+    margin-right: 130px;
+}
+
+.icon-left {
+    float: left;
+    margin-left: 130px;
+}
+
+.team-card-image {
+    width: 190px;
+    height: 200px;
+    padding-bottom: 10px;
+}
+
+.team-card-icon {
+    width: 155px;
+    height: 150px;
+    padding-bottom: 10px;
+}
+
+#my-team-image {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.my-image-container {
+    padding: 50px;
+}
+
+.team-card-info {
+    max-width: 50ch;
+    padding: 50px;
+    background-color: var(--card-background);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.our-aim{
+    padding-bottom: 30px;
+}
+
+.intro-bar {
+    padding: 20px;
+}
+
+.blurb {
+    margin-top: 40px;
+    padding: 35px;
+    max-width: 100ch;
+    background-color: var(--card-background);
+}
+
+.team-card-info div img {
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+}
+
+.team-title-container h3 {
+    font-weight: bold;
+}
+
+.team-card-info .team-bulletpoints {
+    text-align: left;
+}
+
+.team-hours-location {
+    font-weight: bold;
+}
