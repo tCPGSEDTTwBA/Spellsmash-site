@@ -18,8 +18,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/Home', indexRouter)
-app.use('/Team', teamRouter)
+app.use('/home', indexRouter)
+app.use('/team', teamRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
