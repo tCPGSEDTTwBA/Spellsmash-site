@@ -1,0 +1,32 @@
+extends layout
+
+mixin blog-segment(title, subtitle, content, imgSrc, imageText, imgHeight, imgWidth)
+  div(class="col-12 blog-segment")
+    h1.blog-title=title 
+    h3.blog-subtitle=subtitle 
+    p.blog-content=content
+      div.fade-gradient
+      img(src=imgSrc height=imgHeight width=imgWidth style="text-align: center")
+      p.image-text=imageText
+
+block navbar 
+  include includes/navbar.pug
+  +navbar("Blog", "Home", "Team", "Blog", "Download")
+block content
+  div(class="container")
+    div(class="row d-flex justify-content-center")
+      +blog-segment("Development Blog Entry 2",
+      "11/05/2021",
+      "We completed collision detection as well as block movement, produced a GUI, completed the logic of detecting the HIGHEST SCORING word and block removal after scoring a word. e.g. the blocks fall into the pattern DUCKS, it will match DUCK and DUCKS, a calculation will be done to pick the highest scoring word and remove those blocks from the board. We loaded in a library of words and weighted each letter with a score. Using less common letters will now increase the value of the word. A pause, and end screen have been added as well as a timer to allow the game to end. Next we will be implementing an algorithm to pick vowels more often than consonants.",
+      "images/gui.png",
+      "Our new GUI created",
+      600,
+      1024)
+
+      +blog-segment("Development Blog Entry 1",
+      "25/04/2021",
+      "Welcome to our first blog entry, we will use this blog to update with new and exciting features during the development of SpellSmash! We decided on Unity to develop Spellsmash as we felt it held all of the necessary tools to create a game for all ages! We started developing the core functionalities of the game, and pushed our first commit. We now have blocks ready to be spawned as well as a board created to form the boundaries of our game. Blocks can be moved left and right, as well as down to make it fall faster than the standard speed. Our next plan is to introduce collisions to ensure blocks stop moving at the edge of a boundary. We introduced a command pattern to tell blocks when to move and by how much. This command pattern will come in handy later when introducing gravity and other complex movement.",
+      "images/K_letter.png",
+      "Our first block prototype",
+      300,
+      300)

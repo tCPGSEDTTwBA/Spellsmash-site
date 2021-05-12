@@ -1,0 +1,23 @@
+extends layout
+
+mixin download-panel(title, link, subtitle, content)
+  div(class="col-12 download-segment")
+    i.download-icon.fas.fa-hat-wizard.wizard-icon
+      h1.download-title=title
+    div(class="continue")
+      button(href=link role="button" class="button")
+        a(href=link) Download Windows 64 Bit
+    h3.download-subtitle=subtitle
+    p.download-content=content
+      div.fade-gradient
+
+block navbar 
+  include includes/navbar.pug
+  +navbar("Download", "Home", "Team", "Blog", "Download")
+block content
+  div(class="container")
+    div(class="row d-flex justify-content-center")
+      +download-panel("Download Windows Version Below:",
+      "/downloads/SpellSmash.zip", 
+      "Windows Only",
+      "Minimum Specs: 64 bit processor, 4GB RAM, 20MB Memory")

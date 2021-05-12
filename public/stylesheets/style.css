@@ -6,6 +6,8 @@
 @import "team.css";
 @import "buttons.css";
 @import "footer.css";
+@import "blog.css";
+@import "download.css";
 
 * {
     box-sizing: border-box;

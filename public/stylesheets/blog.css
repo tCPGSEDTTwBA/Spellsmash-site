@@ -1,0 +1,40 @@
+.blog-segment {
+    padding: 50px;
+    background-color: var(--card-background);
+    box-shadow: 0px 3px 15px rgba(0,0,0,1);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 215ch;
+    min-height: 400px;
+}
+
+.image-text {
+    display: inline;
+    padding-left: 20px;
+}
+
+.blog-title::before {
+    content: url("../images/icons/newspaper.svg");
+    display: block;
+    height: 120px;
+    width: 120px;
+}
+
+.blog-content {
+    position: relative;
+    max-height: 120px;
+    overflow: overlay;
+}
+
+.fade-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 220px 0;
+    width: auto;
+    background-image: linear-gradient(to bottom, transparent, #B5A77E);
+}
+
+.blog-segment h1, .blog-segment h2, .blog-segment h3, .blog-segment p {
+    color: white;
+}

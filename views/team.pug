@@ -18,11 +18,9 @@ mixin card(title, name, isDev, dates, pictureSrc, ...bulletpoints)
                         p.team-bulletpoint-content= bulletpoint
         
 
-
-
 block navbar 
   include includes/navbar.pug
-  +navbar("Team", "Home", "Team")
+  +navbar("Team", "Home", "Team", "Blog", "Download")
 block content
     div(class="container")
         div(class="row intro-bar")
