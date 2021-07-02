@@ -12,10 +12,35 @@ mixin blog-segment(title, subtitle, content, imgSrc, imageText, imgHeight, imgWi
 block navbar 
   include includes/navbar.pug
   +navbar("Blog", "Home", "Team", "Blog", "Download")
+
 block content
   div(class="container")
     div(class="row d-flex justify-content-center")
-      +blog-segment("Development Blog Entry 2",
+      +blog-segment("Development Blog Entry 5 - Sound Test!",
+      "01/06/2021",
+      "We have now added music and sound effects to SpellSmash, as well as some final touches before our final release date! We have spruced up all aspects of the visual design to give the players extra 'crunchiness' you will now get audible sound effects when bloks land, a positive ding when you score points and relaxing 'mystical' theme music while you play! We have also added more visual changes to the backgrounds of our game, this includes adding a themed 'magic book' texture to the background to immerse the player into the world of SpellSmash!",
+      "images/newgui.png",
+      "The fresh look!",
+      600,
+      1024)
+
+      +blog-segment("Development Blog Entry 4 - Powerups!",
+      "01/06/2021",
+      "We have added new special blocks that will give you double points when used to spell a word! Watch out for them, they will be a golden yellow with magic particles emmiting from them! These blocks will help you increase your score!",
+      "images/powerup.png",
+      "Power up block",
+      300,
+      300)
+
+      +blog-segment("Development Blog Entry 3 - Internationalisation",
+      "01/06/2021",
+      "Bonjour! We have added French to Spellsmash. Players will be able to choose the french language as their language of choice in the options menu. This will load in the french scrabble word list, allowing players to be scored on french words!",
+      "images/options.png",
+      "Options menu",
+      300,
+      300)
+
+      +blog-segment("Development Blog Entry 2 - GUI!",
       "11/05/2021",
       "We completed collision detection as well as block movement, produced a GUI, completed the logic of detecting the HIGHEST SCORING word and block removal after scoring a word. e.g. the blocks fall into the pattern DUCKS, it will match DUCK and DUCKS, a calculation will be done to pick the highest scoring word and remove those blocks from the board. We loaded in a library of words and weighted each letter with a score. Using less common letters will now increase the value of the word. A pause, and end screen have been added as well as a timer to allow the game to end. Next we will be implementing an algorithm to pick vowels more often than consonants.",
       "images/gui.png",
@@ -23,7 +48,7 @@ block content
       600,
       1024)
 
-      +blog-segment("Development Blog Entry 1",
+      +blog-segment("Development Blog Entry 1 - Hello!",
       "25/04/2021",
       "Welcome to our first blog entry, we will use this blog to update with new and exciting features during the development of SpellSmash! We decided on Unity to develop Spellsmash as we felt it held all of the necessary tools to create a game for all ages! We started developing the core functionalities of the game, and pushed our first commit. We now have blocks ready to be spawned as well as a board created to form the boundaries of our game. Blocks can be moved left and right, as well as down to make it fall faster than the standard speed. Our next plan is to introduce collisions to ensure blocks stop moving at the edge of a boundary. We introduced a command pattern to tell blocks when to move and by how much. This command pattern will come in handy later when introducing gravity and other complex movement.",
       "images/K_letter.png",
