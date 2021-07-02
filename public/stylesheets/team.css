@@ -48,7 +48,6 @@
 .blurb {
     margin-top: 40px;
     padding: 35px;
-    max-width: 100ch;
     background-color: var(--card-background);
 }
 
